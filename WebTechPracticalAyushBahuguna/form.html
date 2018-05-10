@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTML Form With Validation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/form.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- action is set to # as we have nowhere to post to. -->
+        <form class="form" action="#" method="post">
+        <div class="card">
+
+            <div class="card-header">
+                <h1>Basic Info</h1>
+            </div>
+
+            <div class="card-content">
+                    <div class="input-group">
+                        <input type="text" id="name" placeholder="Full Name" required>
+                        <label for="name">Full Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="tel" id="phoneNumber" placeholder="Phone Number" size="10" minlength="10" maxlength="10" required>
+                        <label for="phoneNumber">Phone Number</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="date" id="dob" placeholder="Age" required>
+                        <label for="age">D.O.B.</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" placeholder="Email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-group">
+                        <textarea name="address" id="address" cols="52" rows="5" placeholder="Address" required></textarea>
+                        <label for="address">Address</label>
+                    </div>
+
+                    <div class="card-footer">
+                        <button class="button" type="submit" id="submit_button">Submit</button>
+                    </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h1>Player Attributes</h1>
+            </div>
+            <div class="card-content">
+                    <div class="input-group-checkBox">
+                        <label1><strong>PlayerType:</strong></label1>
+                        <input type="radio" id="batsman" value=""  name="playerType" required> Batsman
+                        <input type="radio" id="bowler" value="" name="playerType"  required> Bowler
+                        <input type="radio" id="allRounder" value="" name="playerType" required> AllRounder
+                    </div>
+                    <div class="input-group-checkBox">
+                        <label1><strong>BowlingType:</strong> </label1>
+                        <input type="radio" id="batsman" value="" name="bowlingType" required>RightHandBowling
+                        <input type="radio" id="bowler" value="" name="bowlingType" required> LeftHandBowling
+                    </div>
+                    <div class="input-group-checkBox">
+                        <label1> <strong>BattingType:</strong></label1>
+                        <input type="radio" id="batsman" value="" name="battingType" required>RightHandBatting
+                        <input type="radio" id="bowler" value="" name="battingType" required> LeftHandBatting
+                    </div>
+                    <div class="input-group">
+                        <label1> <strong>Countries:</strong></label1>
+                        <select name="country" id="country"></select>
+                    </div>
+                    <div class="input-group">
+                        <label1><strong>Teams:</strong></label1>
+                        <select name="teams" id="teams">
+                            <option value="Royal Challenger Banglore">Royal Challenger Banglore </option>
+                            <option value=Kotkata Knight Rider"Kotkata Knight Rider">Kotkata Knight Rider</option>
+                            <option value="Chennai Super Kings">Chennai Super Kings</option>
+                            <option value="Delhi Daredevils">Delhi Daredevils</option>
+                            <option value="Sunrise Hydrabaad">Sunrise Hydrabaad</option>
+                            <option value="Mumbai Indians">Mumbai Indians</option>
+                            <option value="Kings XI Punjab">Kings XI Punjab</option>
+                            <option value="Rajsthan Royals">Rajsthan Royals</option>
+                        </select>
+                    </div>
+                    <div class="card-footer">
+                        <button class="button" type="reset" id="submit_button">Reset</button>
+                    </div>
+            </div>
+        </div>
+        </form>
+    </div>
+    <script src="js/form.js"></script>
+</body>
+
+</html>
